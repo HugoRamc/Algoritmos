@@ -30,3 +30,16 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
+/*
+	./inicio < numeros.txt      redireccionar la entrada del teclado
+
+
+	./inicio > salida.txt        redireccionar la salida del programa remplazando todo lo del archivo
+
+	./inicio >> salida.txt        redireccionar la salida del programa escribiendo al final del archivo
+
+
+
+
+
+*/
