@@ -7,23 +7,17 @@ int main(int argc, char const *argv[])
 
 	num = atoi(argv[1]);
 
-	int *array;
+	int *array = (int *)malloc(sizeof(int)*num);
 
-	array = (int *)malloc(sizeof(int)*num);
-
-	printf("Introduc un n menor a 10,000,000\n");
-	//scanf("%d",&num);
-
-	while(lim < num)
+	for(int i = 0;i<num;++i)
 	{
-		
-		scanf("%d",&num1);
-
-
-		printf("%d\n",num1);
-
-		lim = lim +1;
+		array[i] = i;
 	}
+
+	
+
+
+	printf("Terminó el programa\n");
 
 
 
