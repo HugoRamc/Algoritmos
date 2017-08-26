@@ -5,15 +5,17 @@ int main(int argc, char const *argv[])
 {
 	int num,num1,lim=0;
 
-	num = atoi(argv[1]);
+	if(argc>=2){
+		num = atoi(argv[1]);
 
-	int *array = (int *)malloc(sizeof(int)*num);
+		int *array = (int *)malloc(sizeof(int)*num);
 
-	for(int i = 0;i<num;++i)
-	{
-		array[i] = i;
+		for(int i = 0;i<num;++i)
+		{
+			array[i] = i;
+		}
+
 	}
-
 	
 
 

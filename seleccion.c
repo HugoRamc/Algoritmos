@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-void ordenSeleccion(int *arrNums){
+void ordenSeleccion(int *arrNums,int lim){
 	//esta variable p nos va a ayudar a controlar el numero minimo del arreglo
 	int p;
 
@@ -57,7 +57,7 @@ int main(int argc, char const *argv[])
 
 		//ejecutamos la funcion
 
-		ordenSeleccion(arrNums);
+		ordenSeleccion(arrNums,lim);
 
 
 	}else{
