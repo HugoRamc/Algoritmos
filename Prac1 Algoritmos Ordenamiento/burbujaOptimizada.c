@@ -8,7 +8,7 @@ void burbujaOptimizada(int *arrNums, int n){
 	//Si no hay cambios se detiene for
 	for(int i=1; (i<n && (strcmp(cambios,"si")==0)); i++){
 		strcpy(cambios, "no");
-		for(int j=0; j<=n-i; j++){
+		for(int j=0; j<(n-i); j++){
 			//Compara el primer elemento, con el siguiente y hace el cambio del menor
 			if(arrNums[j] > arrNums[j+1]){
 				int temp = arrNums[j];
@@ -18,7 +18,6 @@ void burbujaOptimizada(int *arrNums, int n){
 			}
 		}
 	}
-
 	for(int i=0;i<n;i++){
 		printf("%d\n",arrNums[i]);	
 	}
