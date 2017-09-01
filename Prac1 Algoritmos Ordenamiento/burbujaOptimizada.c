@@ -1,3 +1,8 @@
+/*
+	Autor: Giselle Flores Tepatl
+		 	Miguel García Cebada
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

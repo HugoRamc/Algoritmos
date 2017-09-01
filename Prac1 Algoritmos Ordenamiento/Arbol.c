@@ -1,3 +1,7 @@
+/*
+	Autor: Miguel García Cebada		
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

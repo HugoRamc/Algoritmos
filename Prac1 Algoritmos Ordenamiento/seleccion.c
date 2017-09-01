@@ -1,3 +1,7 @@
+/*
+	Autor: Giselle Flores Tepatl
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"

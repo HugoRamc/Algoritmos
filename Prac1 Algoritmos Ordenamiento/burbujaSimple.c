@@ -1,6 +1,13 @@
+/*
+	Autor: Giselle Flores Tepatl
+
+
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
+
+
 
 //La funcion recibe como argumento un apuntador a arreglo de enteros, y el numero de elementos a ordenar maximo 10,000,000
 void burbujaSimple(int *arrNums, int n){

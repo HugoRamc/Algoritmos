@@ -1,3 +1,8 @@
+/*
+	Autor: Hugo Enrique Ramírez Centeno
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
@@ -15,9 +20,9 @@ void insercion(int *arrNums, int n){
 		arrNums[j+1]=temp;	
 	}
 
-	for(int i=0;i<n;i++){
+	/*for(int i=0;i<n;i++){
 		printf("%d\n",arrNums[i]);	
-	}
+	}*/
 }
 
 int main(int argc, char const *argv[]){
