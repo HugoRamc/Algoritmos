@@ -1,9 +1,6 @@
-/*
-	Autor: Miguel García Cebada		
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
+#include "tiempo.h"
 
 void ordenar();
 void infijo();
@@ -16,32 +13,48 @@ struct  elemento
 	struct elemento *ptrIzq;
 };
 
+int *arrNums;
+int contador=0;
+
 int main(int argc, char const *argv[])
 {
+	double utime0, stime0, wtime0,utime1, stime1, wtime1; //Variables para medición de tiempos
 	/*Validamos primero que contengan mas de dos argumentos para verificar la n de entrada*/
 	
 	if(argc>=2)
 	{
-		/*Creamos la raiz del arbol*/
-		struct elemento *raiz =NULL;
-		
 		//utilizamos el segundo argumento como la n que va a introducir el usuario
 		int lim = atoi(argv[1]);
 		
-		//llenamos el arbol, recuerden que utilizamos el redireccionamiento de la entrada y salida estandar de linux
-		// < para entrada
-		// > salida sobreescribiendo
-		// >> salida haciendo append
+		//reservamos memoria para el tamaño del arreglo, está pensado para aguantar los 10,000,000
+		arrNums = (int *)malloc(sizeof(int)*lim);
 		
-		int i;
-		for(i=0;i<lim;++i)
+		//Contador
+		int i=0;
+		
+		//llenamos el arreglo
+		for(i=0;i<lim;i++)
 		{
-			//Creamos un nodo auxiliar para recorrer el arbol y otro para almacenar un nuevo dato
-			struct elemento *aux;
-			struct elemento *aux2;
+			scanf("%d",&arrNums[i]);
+			//printf("%d \n",arrNums[i]);
+		}
+		
+		//Iniciar el conteo del tiempo para las evaluaciones de rendimiento
+		uswtime(&utime0, &stime0, &wtime0);
+		
+		/*Creamos la raiz del arbol*/
+		struct elemento *raiz =NULL;
+		
+		//Creamos un nodo auxiliar para recorrer el arbol y otro para almacenar un nuevo dato
+		struct elemento *aux;
+		struct elemento *aux2;
+		
+		for(i=0;i<lim;i++)
+		{
+			
 			
 			aux2=(struct elemento *)malloc(sizeof(struct elemento));
-			scanf("%d",&aux2->dato);
+			aux2->dato=arrNums[i];
 			aux2->ptrDer=NULL;
 			aux2->ptrIzq=NULL;	
 			
@@ -88,6 +101,32 @@ int main(int argc, char const *argv[])
 
 		//Imprimimos en infijo el arbol (de menor a mayor)
 		infijo(raiz);
+		
+		
+		//Evaluar los tiempos de ejecución 
+		uswtime(&utime1, &stime1, &wtime1);
+
+		//Cálculo del tiempo de ejecución del programa
+		printf("\n");
+		printf("real (Tiempo total)  %.10f s\n",  wtime1 - wtime0);
+		printf("user (Tiempo de procesamiento en CPU) %.10f s\n",  utime1 - utime0);
+		printf("sys (Tiempo en acciónes de E/S)  %.10f s\n",  stime1 - stime0);
+		printf("CPU/Wall   %.10f %% \n",100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
+		printf("\n");
+	
+		//Mostrar los tiempos en formato exponecial
+		printf("\n");
+		printf("real (Tiempo total)  %.10e s\n",  wtime1 - wtime0);
+		printf("user (Tiempo de procesamiento en CPU) %.10e s\n",  utime1 - utime0);
+		printf("sys (Tiempo en acciónes de E/S)  %.10e s\n",  stime1 - stime0);
+		printf("CPU/Wall   %.10f %% \n",100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
+		printf("\n");
+		
+		//Impresion final
+		for(i=0;i<lim;++i)
+		{
+			printf("%d \n",arrNums[i]);
+		}
 	}
 	else
 	{
@@ -104,7 +143,8 @@ void infijo(struct elemento *raiz)
     {
         infijo(raiz->ptrIzq);
     }
-    printf("%d \n",raiz->dato);
+    arrNums[contador]=raiz->dato;
+	contador++;
     if(raiz->ptrDer!=NULL)
     {
         infijo(raiz->ptrDer);

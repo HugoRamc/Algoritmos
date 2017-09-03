@@ -1,25 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
-
+//la funcion recibe como argumento un apuntador a la posicion del arreglo y el numero de elementos a leer
 void ordenaShell(int *arrNums,int n){
+
+	//el algoritmo shell realiza comparaciones con posiciones no adyacentes, es decir mas alejados
+	//de una distancia k
+
+	//variable para indicar 
 	int k =  n/2;
 	int v;
 	int j;
 	while(k>=1){
+
+		//se empieza el recorrido del arreglo desde la distancia desde la posicion cero hasta k
 		for(int i=k;i<=n;++i){
 			v = arrNums[i];
 			j = i - k;
 
+			//se realiza la comparacion con un elemento de atras con salto de distancia k
+			//este ciclo se realiza hasta que el elemento comparador sea el mas pequeño dentro de todos sus saltos
 			while(j>=0 && arrNums[j] > v){
 				arrNums[j+k] = arrNums[j];
 
 				j-=k;
+				//
 			} 
+			//asignamos la posicion ma
 			arrNums[j+k]=v;
-			//printf("%d\n",v);
+			
 		}
 		
+		//reduce la distancia del salto
 		k/=2;
 
 	}
