@@ -1,5 +1,5 @@
 /*
-	Autor: Hugo Enrique Ramírez Centeno
+	Autor: Giselle Flores Tepatl
 
 */
 
@@ -9,20 +9,20 @@
 
 //La funcion recibe como argumento un apuntador a arreglo de enteros, y el numero de elementos a ordenar maximo 10,000,000
 void insercion(int *arrNums, int n){
-	for(int i=1;i<n;i++){
+	for(int i=0;i<n-1;i++){
+		int j = i;
 		int temp = arrNums[i];
-		int j = i-1;
 		//Si el elemento j es mayor que su consecutivo, hace el cambio del mayor en la siguiente posicion
-		while(arrNums[j]>temp && j>=0){
-			arrNums[j+1] = arrNums[j];
+		while(j>0 && temp<arrNums[j-1]){
+			arrNums[j] = arrNums[j-1];
 			j--;
 		}
-		arrNums[j+1]=temp;	
+		arrNums[j]=temp;	
 	}
 
-	/*for(int i=0;i<n;i++){
+	for(int i=0;i<n;i++){
 		printf("%d\n",arrNums[i]);	
-	}*/
+	}
 }
 
 int main(int argc, char const *argv[]){
