@@ -11,18 +11,16 @@
 
 //La funcion recibe como argumento un apuntador a arreglo de enteros, y el numero de elementos a ordenar maximo 10,000,000
 void burbujaSimple(int *arrNums, int n){
-	for(int i=1;i<n;i++){
-		for(int j=0;j<n-1;j++){
-			//Compara al primer elemento, con el siguiente y hace el cambio del menor
+	for(int i=0;i<n-2;i++){//El arreglo arrNums indexa desde 0 hasta n-1
+		for(int j=0;j<(n-2-i);j++){
+			//Compara al primer elemento, con el siguiente y hace el cambio
 			if(arrNums[j]>arrNums[j+1]){
 				int temp = arrNums[j];
 				arrNums[j] = arrNums[j+1];
 				arrNums[j+1] = temp;
 			}
-		}
-		//printf("%d\n",arrNums[i-1]);	
+		}	
 	}
-
 	//for(int i=0;i<n;i++){
 	//	printf("%d\n",arrNums[i]);	
 	//}
