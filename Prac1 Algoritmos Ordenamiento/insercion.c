@@ -9,7 +9,7 @@
 
 //La funcion recibe como argumento un apuntador a arreglo de enteros, y el numero de elementos a ordenar maximo 10,000,000
 void insercion(int *arrNums, int n){
-	for(int i=0;i<n-1;i++){
+	for(int i=0;i<=n-1;i++){
 		int j = i;
 		int temp = arrNums[i];
 		//Si el elemento j es mayor que su consecutivo, hace el cambio del mayor en la siguiente posicion
@@ -20,9 +20,9 @@ void insercion(int *arrNums, int n){
 		arrNums[j]=temp;	
 	}
 
-	for(int i=0;i<n;i++){
-		printf("%d\n",arrNums[i]);	
-	}
+	//for(int i=0;i<n;i++){
+	//	printf("%d\n",arrNums[i]);	
+	//}
 }
 
 int main(int argc, char const *argv[]){
