@@ -1,11 +1,12 @@
 /*
-	Autor: Giselle Flores Tepatl
+	Autor: hugo Enrique Ramírez Centeno
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
 
+//esta funcion realiza el algoritmo de seleccion, recibe como parametros un apuntador al arreglo de numeros y el numero de elementos a ordenar en el arreg
 void ordenSeleccion(int *arrNums,int lim){
 	//esta variable p nos va a ayudar a controlar el numero minimo del arreglo
 	int p;
@@ -36,6 +37,11 @@ void ordenSeleccion(int *arrNums,int lim){
 
 
 		}
+
+		/*for (int i = 0; i < lim; ++i)
+		{
+			printf("%d\n",arrNums[i]);	
+		}*/
 
 }
 
