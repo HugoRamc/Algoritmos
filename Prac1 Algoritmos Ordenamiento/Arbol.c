@@ -2,8 +2,8 @@
 	Titulo: Algoritmo de ordenamiento "Árbol Binario"
 	Descripción: Este programa recibe un numero entero y arreglo de enteros del tamaño del primer entero introducido y
 				 ordena todos los numeros del arreglo por medio del algoritmo de ordenamiento "Árbol Binario", este algoritmo
-				 no utiliza dos ciclos para comparar, es por esto que la complejidad es menor y esto genera que sea más eficiente
-				 en el ordenamiento. para recorrer el agoritmo solo se requiere un ciclo, cuya complejidad es lineal
+				 solo utiliza un ciclo para construir el árbol por lo que la complejidad del algoritmo se reduce, esto genera que sea más eficiente
+				 el ordenamiento. para recorrer el agoritmo solo se requiere un ciclo, cuya complejidad es lineal
 	Fecha:1 - septiembre - 2017
 	Versión: 3.1
 	Autor: Miguel García Cebada
