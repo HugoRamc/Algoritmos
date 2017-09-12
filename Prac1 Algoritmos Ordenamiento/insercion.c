@@ -1,4 +1,11 @@
 /*
+	Titulo: Algoritmo de ordenamiento "Inserción"
+	Descripción: Este programa recibe un numero entero y arreglo de enteros del tamaño del primer entero introducido y
+				 ordena todos los numeros del arreglo por medio del algoritmo de ordenamiento "Inserción". Este algoritmo
+				 es un caso particular del algoritmo de ordenamiento shell, la distancia de comparacion entre elementos es de 1
+				 es decir, compara elementos que se encuentren consecutivos en el arreglo
+	Fecha:31 - agosto - 2017
+	Versión: 3.0
 	Autor: Giselle Flores Tepatl
 
 */
@@ -20,9 +27,9 @@ void insercion(int *arrNums, int n){
 		arrNums[j]=temp;	
 	}
 
-	//for(int i=0;i<n;i++){
-	//	printf("%d\n",arrNums[i]);	
-	//}
+	/*for(int i=0;i<n;i++){
+		printf("%d\n",arrNums[i]);	
+	}*/
 }
 
 int main(int argc, char const *argv[]){

@@ -1,6 +1,13 @@
 /*
-	Autor: Giselle Flores Tepatl
-		 	Miguel García Cebada
+	Titulo: Algoritmo de ordenamiento "Burbuja Optimizada"
+	Descripción: Este programa recibe un numero entero y arreglo de enteros del tamaño del primer entero introducido y
+				 ordena todos los numeros del arreglo por medio del algoritmo de ordenamiento "Burbuja Optimizada". En
+				 este algoritmo se reduce el número de ciclos una vez que el último elemento queda ordenado, admás termina
+				 si al recorrer el arreglo no detecta cambios
+	Fecha: 30 - agosto - 2017
+	Versión: 3.0
+	Autor: Giselle Flores Tepatl y Miguel García Cebada
+
 */
 
 #include <stdio.h>
@@ -24,9 +31,9 @@ void burbujaOptimizada(int *arrNums, int n){
 			}
 		}
 	}
-	//for(int i=0;i<n;i++){
-	//	printf("%d\n",arrNums[i]);	
-	//}
+	/*for(int i=0;i<n;i++){
+		printf("%d\n",arrNums[i]);	
+	}*/
 }
 
 

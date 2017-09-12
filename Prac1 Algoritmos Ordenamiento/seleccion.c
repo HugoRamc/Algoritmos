@@ -1,5 +1,12 @@
 /*
-	Autor: hugo Enrique Ramírez Centeno
+	Titulo: Algoritmo de ordenamiento "Selección"
+	Descripción: Este programa recibe un numero entero y arreglo de enteros del tamaño del primer entero introducido y
+				 ordena todos los numeros del arreglo por medio del algoritmo de ordenamiento "Selección", este algoritmo
+				 busca el elemento mas pequeño de todo el arreglo y lo va poniendo al principio.
+	Fecha: 29 - agosto - 2017
+	Versión: 2.3
+	Autor: Hugo Enrique Ramírez Centeno
+
 */
 
 #include <stdio.h>

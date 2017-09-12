@@ -1,11 +1,19 @@
 /*
-	Autor: Hugo Enrique Ramírez Centeno
+	Titulo: Algoritmo de ordenamiento "Shell"
+	Descripción: Este programa recibe un numero entero y arreglo de enteros del tamaño del primer entero introducido y
+				 ordena todos los numeros del arreglo por medio del algoritmo de ordenamiento "Shell", este algoritmo es la
+				 generalización del algoritmo de ordenamiento inserción empieza a ordenar elementos no conjuntos, sino 
+				 distanciados, después esta distancia se va acortando hasta llegar a la unidad "1".
+	Fecha:31 - agosto - 2017
+	Versión: 2.4
+	Autor: Hugo Enrique Ramírez Centeno 
+
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
-//la funcion realiza el algoritmo de ordenamiento shell, recibe como argumento un apuntador a la posicion del arreglo y el numero de elementos a leer
+//la funcion realiza el algoritmo de ordenamiento shell,p recibe como argumento un apuntador a la posicion del arreglo y el numero de elementos a leer
 void ordenaShell(int *arrNums,int n){
 
 	//el algoritmo shell realiza comparaciones con posiciones no adyacentes, es decir mas alejados
@@ -39,9 +47,9 @@ void ordenaShell(int *arrNums,int n){
 		k/=2;
 
 	}
-	for(int i=0;i<n;i++){
+	/*for(int i=0;i<n;i++){
 		printf("%d\n",arrNums[i]);	
-	}
+	}*/
 	
 }
 

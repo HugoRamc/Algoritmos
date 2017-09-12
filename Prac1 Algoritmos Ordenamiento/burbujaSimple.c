@@ -1,6 +1,10 @@
 /*
+	Titulo: Algoritmo de ordenamiento "Burbuja Simple"
+	Descripción: Este programa recibe un numero entero y arreglo de enteros del tamaño del primer entero introducido y
+				 ordena todos los numeros del arreglo por medio del algoritmo de ordenamiento "Burbuja Simple"
+	Fecha:1 - septiembre - 2017
+	Versión: 3.1
 	Autor: Giselle Flores Tepatl
-
 
 */
 #include <stdio.h>

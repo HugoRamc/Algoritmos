@@ -1,3 +1,15 @@
+/*
+	Titulo: Algoritmo de ordenamiento "Árbol Binario"
+	Descripción: Este programa recibe un numero entero y arreglo de enteros del tamaño del primer entero introducido y
+				 ordena todos los numeros del arreglo por medio del algoritmo de ordenamiento "Árbol Binario", este algoritmo
+				 no utiliza dos ciclos para comparar, es por esto que la complejidad es menor y esto genera que sea más eficiente
+				 en el ordenamiento. para recorrer el agoritmo solo se requiere un ciclo, cuya complejidad es lineal
+	Fecha:1 - septiembre - 2017
+	Versión: 3.1
+	Autor: Miguel García Cebada
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "tiempo.h"
@@ -106,6 +118,12 @@ int main(int argc, char const *argv[])
 		//Evaluar los tiempos de ejecución 
 		uswtime(&utime1, &stime1, &wtime1);
 
+		//Impresion final
+		/*for(i=0;i<lim;++i)
+		{
+			printf("%d \n",arrNums[i]);
+		}*/
+		
 		//Cálculo del tiempo de ejecución del programa
 		printf("\n");
 		printf("real (Tiempo total)  %.10f s\n",  wtime1 - wtime0);
@@ -122,11 +140,7 @@ int main(int argc, char const *argv[])
 		printf("CPU/Wall   %.10f %% \n",100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
 		printf("\n");
 		
-		//Impresion final
-		for(i=0;i<lim;++i)
-		{
-			printf("%d \n",arrNums[i]);
-		}
+		
 	}
 	else
 	{
