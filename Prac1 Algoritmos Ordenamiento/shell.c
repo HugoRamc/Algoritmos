@@ -47,9 +47,9 @@ void ordenaShell(int *arrNums,int n){
 		k/=2;
 
 	}
-	/*for(int i=0;i<n;i++){
+	for(int i=0;i<n;i++){
 		printf("%d\n",arrNums[i]);	
-	}*/
+	}
 	
 }
 
@@ -81,7 +81,7 @@ int main(int argc, char const *argv[])
 		ordenaShell(arrNums,lim);
 		uswtime(&utime1, &stime1, &wtime1);
 
-			//Cálculo del tiempo de ejecución del programa
+		/*	//Cálculo del tiempo de ejecución del programa
 			printf("\n");
 			printf("real (Tiempo total)  %.10f s\n",  wtime1 - wtime0);
 			printf("user (Tiempo de procesamiento en CPU) %.10f s\n",  utime1 - utime0);
@@ -96,7 +96,7 @@ int main(int argc, char const *argv[])
 			printf("sys (Tiempo en acciónes de E/S)  %.10e s\n",  stime1 - stime0);
 			printf("CPU/Wall   %.10f %% \n",100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
 			printf("\n");
-			
+			*/
 
 
 
