@@ -65,6 +65,7 @@ int main(int argc, char const *argv[]){
 		numBusqueda = atoi(argv[1]);
 		arr = (int *)malloc(sizeof(int)*n);//reservamos memoria para el tamaño del arreglo
 
+		printf("n= %d \n",n);
 		//llenamos el arreglo
 		for(int i=0;i<n;++i){
 			scanf("%d",&arr[i]);
