@@ -1,9 +1,10 @@
 /*
-	Titulo: Algoritmo de busqueda binaria"
+	Titulo: Algoritmo de busqueda arbol binario"
 	Descripción: Este programa recibe un dos numero enteros y un arreglo de enteros ordenados de manera ascendente del tamaño del segundo 
 				 entero introducido, el primer numero entero introducido será el mismo que se busque durante la ejecución de este algoritmo
-				 la busqueda binaria se realiza reduciendo el espacio de busqueda de los numeros, este algoritmo funciona solamente si los 
-				 números se encuentran ordenados.
+				 este algoritmo puede ser utilizado para cuando el arreglo de los numeros enteros estan o no ordenados, 
+				 Se realiza la contrucción de un arbol B y despues se hace un recorrido por cada nodo del árbol, hasta encontral el numero buscado
+				 o en su defecto se llega a un elemento nulo donde no se encuentra el elemento a buscar
 
 
 	Fecha:23 - septiembre - 2017
