@@ -26,8 +26,28 @@ struct elemento{
 
 
 //esta función recibe como parametro el arreglo de enteros, el tamaño del arreglo y el numero a buscar
-void busquedaArbol(int *arr,,int numBusqueda){
+void busquedaArbol(struct elemento *raiz,int numBusqueda){
+	//printf("busqueda en el arbol\n");
+	int bandera = 0;
+	struct elemento *aux;
+	aux = raiz;
 	
+	while(aux!=NULL){
+		if(aux->dato==numBusqueda){
+			bandera = 1;
+			printf("Numero %d encontrado\n",numBusqueda );
+			break;
+		}else if(aux->dato > numBusqueda){
+			aux = aux->ptrIzq;
+		}else{
+			aux = aux->ptrDer;
+		}
+	}
+
+	if(bandera == 0){
+		printf("Numero no encontrado\n");
+	}
+
 }
 
 
@@ -51,9 +71,13 @@ int main(int argc, char const *argv[])
 		}
 
 		//creacion del arbol
-		for(i=0;i<n;i++){		
+		struct elemento *raiz =NULL;
+		//Creamos un nodo auxiliar para recorrer el arbol y otro para almacenar un nuevo dato
+		struct elemento *aux;
+		struct elemento *aux2;
+		for(int i=0;i<n;i++){		
 			aux2=(struct elemento *)malloc(sizeof(struct elemento));
-			aux2->dato=arrNums[i];
+			aux2->dato=arr[i];
 			aux2->ptrDer=NULL;
 			aux2->ptrIzq=NULL;	
 			
@@ -91,6 +115,7 @@ int main(int argc, char const *argv[])
 		}
 
 		//busqueda del numero
+		busquedaArbol(raiz,numBusqueda);
 
 		
 
