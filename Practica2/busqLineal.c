@@ -48,6 +48,7 @@ int main(int argc, char const *argv[]){
 		n = atoi(argv[2]);
 		arr = (int *)malloc(sizeof(int)*n);//reservamos memoria para el tamaño del arreglo
 
+		printf("n= %d \n",n);
 		//llenamos el arreglo, ya estan ordenados
 		for(int i=0;i<n;++i){
 			scanf("%d",&arr[i]);
