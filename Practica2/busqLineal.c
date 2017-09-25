@@ -20,7 +20,7 @@ void busquedaLineal(int *arr,int n,int numBusqueda){
 		if(arr[i]==numBusqueda){
 			bandera = 1;
 			printf("Numero %d encontrado en el arreglo\n", numBusqueda);
-			
+			break;
 		}
 	}
 
